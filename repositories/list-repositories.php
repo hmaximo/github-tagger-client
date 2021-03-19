@@ -47,6 +47,7 @@
                 <div class="row">
                     <?php
                         $gitHubUser = $_SESSION['gitHubUser'];
+
                         $get = file_get_contents("http://api-github-tagger.herokuapp.com/users/$gitHubUser/starred-repositories");
 
                         $repositories = json_decode($get, true);
